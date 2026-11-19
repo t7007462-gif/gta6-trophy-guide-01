@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Leonida Trophy Guide — GTA VI · 55 trophies, tracker &amp; roadmap</title>
+<meta name="description" content="An offline guide and tracker for all 55 PlayStation 5 trophies of Grand Theft Auto VI: checklist, roadmap to the platinum, missable flags, and a cited guide for every trophy.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="masthead">
+  <div class="masthead-inner">
+    <p class="kicker">Grand Theft Auto VI · PlayStation 5 · offline guide</p>
+    <h1>Leonida Trophy Guide</h1>
+    <p class="lede">Every one of the 55 official trophies — 1 platinum, 2 gold, 6 silver, 46 bronze — with a guide in our own words, its sources cited, a roadmap to the platinum, and a checklist that saves your progress in this browser.</p>
+    <div class="progress-wrap" aria-label="Platinum progress">
+      <div class="progress-line"><span id="progressText">0 of 55 earned</span><span id="progressPct">0%</span></div>
+      <div class="progress-bar"><div id="progressFill" class="progress-fill" style="width:0%"></div></div>
+      <p class="progress-note" id="progressNote">Tick a trophy when you earn it. Progress is saved on this device, and can be exported and imported.</p>
+    </div>
+  </div>
+</header>
+
+<nav class="views" aria-label="Guide views">
+  <button type="button" class="view-tab" data-view="checklist" id="tabChecklist">Checklist</button>
+  <button type="button" class="view-tab" data-view="roadmap" id="tabRoadmap">Roadmap to the platinum</button>
+  <button type="button" class="view-tab" data-view="missables" id="tabMissables">Missable trophies</button>
+</nav>
+
+<section class="toolbar" aria-label="Filters and settings">
+  <label class="search-label">Search <input id="search" type="search" placeholder="Search a trophy, mission or keyword…" autocomplete="off"></label>
+  <div class="kind-filters" role="group" aria-label="Filter by kind">
+    <button type="button" class="kind-btn" data-kind="all">All</button>
+    <button type="button" class="kind-btn" data-kind="story">Story</button>
+    <button type="button" class="kind-btn" data-kind="missable">Missable</button>
+    <button type="button" class="kind-btn" data-kind="collectibles">Collectibles</button>
+    <button type="button" class="kind-btn" data-kind="activities">Activities</button>
+    <button type="button" class="kind-btn" data-kind="online">Online</button>
+  </div>
+  <label class="grade-label">Grade
+    <select id="gradeFilter">
+      <option value="all">All grades</option>
+      <option value="platinum">Platinum</option>
+      <option value="gold">Gold</option>
+      <option value="silver">Silver</option>
+      <option value="bronze">Bronze</option>
+    </select>
+  </label>
+  <label class="spoiler-label"><input id="spoilerToggle" type="checkbox"> Spoiler mode — hide story trophies until earned</label>
+  <div class="save-actions">
+    <button type="button" id="exportBtn">Export progress</button>
+    <label class="import-btn">Import progress <input id="importFile" type="file" accept="application/json,.json"></label>
+    <button type="button" id="resetBtn">Reset</button>
+  </div>
+</section>
+
+<main>
+  <section id="viewChecklist" class="view" aria-label="Trophy checklist">
+    <p class="result-count" id="resultCount"></p>
+    <ul id="trophyList" class="trophy-list"></ul>
+    <p class="empty-note" id="emptyNote" hidden>No trophies match these filters. Clear the search or pick another kind.</p>
+  </section>
+
+  <section id="viewRoadmap" class="view" hidden aria-label="Roadmap to the platinum">
+    <p class="section-intro">Play the story in order, finish the character strands before the finale, then sweep the open world. Each stage lists its trophies in the order to earn them; missable ones are flagged — do those while you are there, because mission replay has not been confirmed for GTA VI.</p>
+    <div id="roadmapStages"></div>
+  </section>
+
+  <section id="viewMissables" class="view" hidden aria-label="Missable trophies">
+    <p class="section-intro">These 18 trophies can be missed: they are tied to a named story mission, a character strand finale, a one-time event, or a choice you only get once. Earn them when they appear; after the finale they may only come back in a new playthrough.</p>
+    <ul id="missableList" class="trophy-list"></ul>
+  </section>
+</main>
+
+<aside id="detailPane" class="detail-pane" hidden aria-label="Trophy guide">
+  <button type="button" id="detailClose" class="detail-close" aria-label="Close guide">×</button>
+  <div id="detailBody"></div>
+</aside>
+
+<footer class="colophon">
+  <p>Names, descriptions and grades are the official PlayStation trophy list, as listed by Exophase and PSNProfiles on 2026-11-18. Every guide is written for this page, in its own words, from the official description, and cites its sources beside it. Grand Theft Auto VI is unreleased (May 2026), so where the description does not pin a place down, the guide says so instead of inventing one.</p>
+  <p>Sources consulted: the official PlayStation trophy list via Exophase, PSNProfiles' GTA VI trophy list, PowerPyx's GTA 6 Trophy Guide, IGN's GTA 6 Wiki, and PlayStationTrophies.org — named beside each trophy's guide. This guide works fully offline: it loads nothing from the network and stores progress only in your browser.</p>
+</footer>
+
+<script type="module" src="app.js"></script>
+</body>
+</html>
